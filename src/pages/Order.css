@@ -1,0 +1,560 @@
+* {
+  box-sizing: border-box;
+}
+#root {
+  display: block;
+  background: #ffffff;
+}
+
+body {
+  margin: 0;
+  font-family: "Barlow", sans-serif;
+  background: #ffffff;
+}
+
+
+ .order-hero {
+  background-color: #faf7f2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0 ;
+  margin: 0;
+  padding-bottom: 10px;
+
+}
+.order-pizza {
+  max-width: 500px;
+  text-align: center;
+  margin-top: 48px;
+  text-align: left;
+}
+.order-pizza h1 {
+  font-size: 20px;
+
+}
+
+.order-hero-pizza {
+  width: 460px;
+  max-width: 90%;
+  display: block;
+  margin-bottom: 24px;
+}
+.rating{
+  text-align: right;
+}
+.order-header {
+  width: 100vw;
+  height: 90px;
+  background: #ce2829;
+  margin-bottom: 0;
+  display: flex;
+  justify-content: center; 
+  align-items: center;
+}
+
+.order-header .logo {
+  height: 40px;
+  margin: 0;
+  justify-content: center;
+  
+
+ 
+}
+
+.page-path {
+  font-size: 14px;
+  color: #5f5f5f;
+  display: flex;
+  gap: 6px;
+  justify-content: left;
+  
+}
+
+.page-path .home-link {
+ color: #1A1A1A;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.page-path strong {
+  font-weight: 600;
+  color: #ce2829;
+}
+
+
+
+
+#order-form {
+  max-width: 520px;
+  margin: 0 auto;
+  padding: 48px 0 80px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+}
+
+
+.size-group {
+  border: none;
+  padding: 0;
+  margin-bottom: 40px;
+  margin-top: -8px;
+ column-gap: 20px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: start;
+  row-gap: 16px;
+  padding-top: 10px;
+}
+
+
+.size-group  legend {
+  grid-column: 1 / -1;
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 100px;
+   margin-bottom: 0px;
+   padding-top: 50px;
+   padding-bottom: -30px;
+}
+
+
+.size-options {
+  display: grid;
+  grid-template-rows: auto auto;
+  row-gap: 16px;
+}
+
+.size-option {
+  position: relative;
+}
+.size-options label {
+  display: inline-flex;
+}
+
+.size-option input {
+  display: none;
+}
+
+.size-option span {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: #faf7f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  color: #5f5f5f;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.size-option span:hover {
+  background: #f5e8d9;
+}
+
+.size-option input:checked + span {
+  background: #fbc000;
+  color: #292929;
+}
+
+
+.select-group {
+  grid-column: 2 / 3;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-top: 50px;
+ }
+
+.select-group label {
+  font-weight: 600;
+  margin-bottom: 0px;
+  
+}
+
+.select-group select {
+  height: 48px;
+  border-radius: 8px;
+  border: none;
+  background: #faf7f2;
+  padding: 0 12px;
+  font-size: 14px;
+}
+
+
+.toppings-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  
+  gap: 20px 100px;
+}
+
+.toppings-grid label {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 14px;
+}
+.toppings-grid input {
+  display: none;
+}
+.toppings-grid label::before {
+  content: "";
+  width: 24px;
+  height: 24px;
+  border-radius: 6px;
+  background: #faf7f2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  color: #292929;
+  transition: all 0.2s ease;
+}
+.toppings-grid input:checked + span::before,
+.toppings-grid label:has(input:checked)::before {
+  background: #fbc000;
+  content: "✓";
+  font-weight: 700;
+}
+
+#order-form input[type="text"],
+#order-form textarea {
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  background: #faf7f2;
+  padding: 12px;
+  font-size: 14px;
+}
+
+#order-form textarea {
+  min-height: 96px;
+  resize: none;
+}
+
+
+.count {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.count button {
+  width: 40px;
+  height: 40px;
+  border: none;
+  background: #fbc000;
+  border-radius: 8px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.count span {
+  font-weight: 600;
+}
+
+
+.order-summary {
+  margin-top: 32px;
+  background: #faf7f2;
+  border-radius: 12px;
+  padding: 24px;
+}
+
+.order-summary h3 {
+  margin-bottom: 16px;
+}
+
+.order-summary p {
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+.order-summary .total {
+  color: #ce2829;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.order-summary button {
+  margin-top: 16px;
+  width: 100%;
+  height: 48px;
+  background: #fbc000;
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.footer {
+  background: #1A1A1A;
+  color: #fff;
+  padding: 30px 0px 20px;
+}
+
+.footer-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 40px;
+  max-width: 1100px;      
+  margin: 0 auto;         
+  padding: 0;  
+}
+
+.footer-copy {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 14px;
+}
+
+.footer-brand h3 {
+ font-family: Londrina Solid;
+ font-weight: 400;
+ font-size: 50px;
+ line-height: 1.1;
+ margin-bottom: 24px;
+ 
+
+}
+.footer-brand p {
+  display: flex;
+  align-items: center;
+ line-height: 3;
+  margin-bottom: 12px;
+  font-family: Barlow;
+  font-size: 18px;
+  gap: 5px;
+  color:#ccc
+}
+.footer-menu {
+  margin-top: 10px;
+  text-align: left;
+  justify-content: center;
+  margin-right: 80px;
+  line-height: 0.5;
+  
+  
+}
+.footer-menu h4,
+.footer-instagram h4 {
+  font-family: Barlow;
+  font-size: 24px;
+  margin-bottom: 20px;
+  margin-top: 40px;
+  
+}
+.footer-menu p {
+  margin-bottom: 5px;
+  font-size: 20px;
+  color: #ccc;
+  margin-top: 30px;
+  
+}
+.footer-instagram {
+margin-top: 10px;
+max-width: 400px;
+justify-content: space-between;
+}
+.insta-grid { 
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.insta-grid img {
+  width: 100%;
+  border-radius: 6px;
+  display: block;
+}
+
+
+.footer-copy {
+  max-width: 1100px;
+  margin: 40px auto 0;
+  padding-top: 20px;
+  border-top: 1px solid #333;
+
+  text-align: left;
+  font-size: 14px;
+  color: #aaa;
+}
+@media (max-width: 400px) {
+
+  
+  body {
+    overflow-x: hidden;
+  }
+
+  #order-form {
+    padding: 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+
+  .order-header {
+    width: 100%;
+    padding: 16px 0;
+  }
+
+  .order-header .logo {
+    display: block;
+    margin: 0 auto;
+    width: 140px;
+  }
+
+  .order-hero {
+    width: 100%;
+    padding: 0;
+  }
+
+  .order-hero img {
+    width: 100%;
+    height: auto;
+    display: block;
+  }
+
+  .order-pizza h1 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .price-row {
+    justify-content: center;
+    gap: 12px;
+    font-size: 14px;
+  }
+
+  .description {
+    font-size: 13px;
+    line-height: 1.6;
+    text-align: center;
+  }
+
+  
+  .size-group {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .size-options {
+    display: flex;
+    justify-content: space-between;
+    gap: 8px;
+  }
+
+  .size-option {
+    flex: 1;
+  }
+
+  .size-option span {
+    width: 44px;
+    height: 44px;
+    font-size: 14px;
+  }
+
+  .select-group {
+    width: 100%;
+  }
+
+  .select-group select {
+    width: 100%;
+    padding: 10px;
+    font-size: 13px;
+  }
+
+
+  .toppings-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+  }
+
+  .toppings-grid label {
+    font-size: 13px;
+    gap: 6px;
+  }
+
+  
+  input[type="text"],
+  textarea {
+    width: 100%;
+    padding: 10px;
+    font-size: 13px;
+  }
+
+  textarea {
+    min-height: 70px;
+  }
+
+  
+  .count {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .count button {
+    width: 36px;
+    height: 36px;
+    font-size: 18px;
+  }
+
+  
+  .order-summary {
+    width: 100%;
+    padding: 14px;
+  }
+
+  .order-summary h3 {
+    font-size: 15px;
+    text-align: center;
+  }
+
+  .order-summary p {
+    font-size: 13px;
+  }
+
+  .order-summary button {
+    width: 100%;
+    margin-top: 12px;
+    padding: 12px;
+    font-size: 15px;
+  }
+
+  
+   .footer {
+    padding: 40px 20px;
+  }
+
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  }
+
+  .footer-brand,
+  .footer-menu,
+  .footer-instagram {
+    width: 100%;
+    text-align: left;
+  }
+
+  .footer-instagram .insta-grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 8px;
+  }
+
+  .footer-copy {
+    text-align: center;
+    margin-top: 32px;
+    font-size: 14px;
+  }
+
+}
